@@ -19,29 +19,59 @@ union() {
 union() {
 
         //de pen binnenin
-       translate([0,0,0])
-       color([0,0,1]) cylinder(h=4,r1=1.2,r2=1,center=false);
+       translate([0,0,-0.01])
+       color([0,0,1]) cylinder(h=4.02,r1=1.2,r2=1,center=false);
        translate([0,0,4])
-       color([0,1,0]) cylinder(h=6,r1=1,r2=2.2,center=false);
+       color([0,1,0]) cylinder(h=6.01,r1=1,r2=2.2,center=false);
        translate([0,0,10])
-        color([1,0,0]) cylinder(h=85,r1=2.2,r2=2.2,center=false);
+        color([1,0,0]) cylinder(h=85.01,r1=2.2,r2=2.2,center=false);
        translate([0,0,95])
-        color([1,0,0]) cylinder(h=2.5,r1=2.2,r2=4,center=false);
-       translate([0,0,97.5])
-        color([1,0,0]) cylinder(h=2.5,r1=4,r2=6,center=false);
+        color([1,0,0]) cylinder(h=5.01,r1=2.2,r2=6,center=false);
 
 	       difference() { // drijfbubbel
                union() {
 		translate([0,0,60])
-      color([1,0,0])  cylinder(h=17.5,r1=10.1,r2=10.1,center=false);
+      color([1,0,0])  cylinder(h=17.501,r1=10.1,r2=10.1,center=false);
 		translate([0,0,77.5])
       color([1,0,0])  cylinder(h=7.5,r1=10.1,r2=7.1,center=false);
                }
 
-	translate([0,0,60])
-       cylinder(h=25,r1=7.1,r2=7.1,center=false);
+	translate([50,0,59.9])
+       cylinder(h=25.2,r1=7.1,r2=7.1,center=false);
       }
 
   }
 
 }
+
+
+
+
+
+
+union() {
+
+        //de pen binnenin
+       translate([50,0,-0.01])
+       color([0,0,1]) cylinder(h=4.02,r1=1.2,r2=1,center=false);
+       translate([50,0,4])
+       color([0,1,0]) cylinder(h=6.01,r1=1,r2=2.2,center=false);
+       translate([50,0,10])
+        color([1,0,0]) cylinder(h=85.01,r1=2.2,r2=2.2,center=false);
+       translate([50,0,95])
+        color([1,0,0]) cylinder(h=5.01,r1=2.2,r2=6,center=false);
+
+	       difference() { // drijfbubbel
+               union() {
+		translate([50,0,60])
+      color([1,0,1])  cylinder(h=17.5,r1=10.1,r2=10.1,center=false);
+		translate([50,0,77.5])
+      color([1,1,0])  cylinder(h=7.5,r1=10.1,r2=7.1,center=false);
+               }
+
+	translate([50,0,59.9])
+       cylinder(h=25.2,r1=7.1,r2=7.1,center=false);
+      }
+
+  }
+
