@@ -41,19 +41,22 @@ rotate([90,0,90]) { linear_extrude(height=2){ polygon(points); } }
 translate([1,0,60])
 rotate([90,0,270]) { linear_extrude(height=2){ polygon(points); } }
 }
-}
-
-
-
 
 // interne drijfbubbel
 translate([0,0,5])
 union() {
         translate([0,0,0])
-    cylinder(h=35,r1=11.5,r2=11.5,center=false);
-        translate([0,0,35])
+    cylinder(h=37.5,r1=11.5,r2=11.5,center=false);
+        translate([0,0,37.5])
     cylinder(h=16.5,r1=11.5,r2=0,center=false);
 }
+
+}
+
+
+
+
+
 
 
 
@@ -80,6 +83,8 @@ cylinder(h=22.5,r1=4,r2=15,center=false);
 
 
 // dwarsdoorsnede
+difference() {
+
 translate([0,-50,0])
 
 color([0,0,1]) difference() {
@@ -121,6 +126,19 @@ rotate([90,0,90]) { linear_extrude(height=2){ polygon(points); } }
 translate([1,0,60])
 rotate([90,0,270]) { linear_extrude(height=2){ polygon(points); } }
 }
+// interne drijfbubbel
+translate([0,0,5])
+union() {
+        translate([0,0,0])
+    cylinder(h=37.5,r1=11.5,r2=11.5,center=false);
+        translate([0,0,37.5])
+    cylinder(h=16.5,r1=11.5,r2=0,center=false);
+}
+
 }
 
 
+translate([0,-70,-5])
+      color([0,0,1])  cube([40,40,120]);
+
+}
