@@ -119,7 +119,67 @@ cylinder(h=22.5,r1=4,r2=15,center=false);
 
 }
 
+translate([0, 100, 29]) {
+hull(){
+translate([-20,0,-5]) {
+rotate(a=[90,0,90]) {
+cylinder(h=40,r=0.75,center=false);
+}
+}
+translate([-20,0,-3]) {
+rotate(a=[90,0,90]) {
+cylinder(h=40,r=0.75,center=false);
+}
+}
+}
+}
+}
 
+
+
+
+
+
+
+
+
+// onderstuk afgeplat
+rotate([90,90,90]) {
+difference() {
+translate([0,50,0]) {
+difference() {
+translate([0,100,30]){
+rotate(a=[0,180,0]){
+
+
+union(){
+resize([15,30,31.4]) {
+
+
+
+hull() {
+    hull() {
+translate([0,-2.5,2.5])
+sphere(4); 
+translate([0,-5,30 - 0.01])
+cylinder(h=0.01,r=10,center=false);
+    }
+
+    hull() {
+translate([0,2.5,2.5])
+sphere(4); 
+translate([0,5,30 - 0.01])
+cylinder(h=0.01,r=10,center=false);
+    }
+}
+}
+
+translate([0,0,7.5])
+cylinder(h=22.5,r1=4,r2=15,center=false);
+}
+}
+
+}
 
 translate([0, 100, 29]) {
 hull(){
@@ -135,15 +195,21 @@ cylinder(h=40,r=0.75,center=false);
 }
 }
 }
+}
+}
 
-
-
-
+translate([0,130,-10]) {
+    cube([40,40,60]);
+}
+}
 }
 
 
 
-// dwarsdoorsnede
+
+
+
+// dwarsdoorsnede hoofdgedeelte
 difference() {
 
 translate([0,-50,0])
